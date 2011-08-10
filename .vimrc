@@ -14,7 +14,6 @@ set completeopt=longest,menu
 set syntax=enable
 set syntax=on
 
-colorscheme evening
 source $VIMRUNTIME/ftplugin/man.vim
 
 autocmd FileType ruby,eruby set omnifunc=rubycomplete#Complete
@@ -23,5 +22,13 @@ autocmd FileType ruby,eruby let g:rubycomplete_rails = 1
 autocmd FileType ruby,eruby let g:rubycomplete_classes_in_global = 1
 autocmd FileType ruby,eruby let g:rubycomplete_include_object = 1
 autocmd FileType ruby,eruby let g:rubycomplete_include_objectspace = 1
-let g:SuperTabRetainCompletionType = 2
-let g:SuperTabDefaultCompletionType = "<C-X><C-O>" 
+
+set t_Co=256
+colorscheme wargrey
+
+let g:AutoComplPop_Behavior = { 
+\ 'c': [ {'command' : "\<C-x>\<C-o>",
+\ 'pattern' : ".",
+\ 'repeat' : 0}
+\ ] 
+\}
