@@ -1,0 +1,7 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =5
+let g:netrw_dirhist_1='/home/bachue/workspace/depot/test/performance'
+let g:netrw_dirhist_2='/home/bachue/workspace/depot/test'
+let g:netrw_dirhist_3='/home/bachue/workspace/depot/test/fixtures'
+let g:netrw_dirhist_4='/home/bachue/workspace/depot/test'
+let g:netrw_dirhist_5='/home/bachue/workspace/depot/public/images'
