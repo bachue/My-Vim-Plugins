@@ -6,6 +6,7 @@ set sts=4
 set sw=4
 set whichwrap=b,s,<,>,[,],h,l
 set hlsearch
+set hidden
 
 filetype on
 filetype plugin on
@@ -18,6 +19,14 @@ set syntax=on
 source $VIMRUNTIME/ftplugin/man.vim
 
 setl omnifunc=nullcomplete#Complete
+
+if has("autocmd") && exists("+omnifunc")
+      autocmd Filetype *
+          \ if &omnifunc == "" |
+          \   setlocal omnifunc=syntaxcomplete#Complete |
+          \ endif
+endif
+
 autocmd FileType * setl omnifunc=nullcomplete#Complete
 autocmd FileType python setl omnifunc=pythoncomplete#Complete
 autocmd FileType javascript setl omnifunc=javascriptcomplete#CompleteJS
@@ -42,3 +51,8 @@ let g:AutoComplPop_Behavior = {
 \ 'repeat' : 0}
 \ ] 
 \}
+
+let g:miniBufExplMapWindowNavVim = 1
+let g:miniBufExplMapWindowNavArrows = 1
+let g:miniBufExplMapCTabSwitchBufs = 1
+let g:miniBufExplModSelTarget = 1
