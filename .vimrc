@@ -13,8 +13,8 @@ filetype plugin on
 filetype indent on
 
 set completeopt=longest,menu
-set syntax=enable
-set syntax=on
+syntax enable
+syntax on
 
 source $VIMRUNTIME/ftplugin/man.vim
 
