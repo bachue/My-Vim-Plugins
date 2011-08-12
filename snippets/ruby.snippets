@@ -290,9 +290,13 @@ snippet sel
 	select { |${1:e}|, ${2} }
 snippet lam
 	lambda { |${1:args}| ${2} }
-snippet do
+snippet do do |..| .. end
 	do |${1:variable}|
 		${2}
+	end
+snippet do do .. end
+	do 
+		${1}
 	end
 snippet :
 	:${1:key} => ${2:"value"}${3}
