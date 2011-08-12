@@ -58,3 +58,14 @@ let g:miniBufExplMapCTabSwitchBufs = 1
 let g:miniBufExplModSelTarget = 1
 
 nnoremap <silent> <F5> :NERDTree<CR>
+
+let Grep_Path = '/bin/grep'
+let Fgrep_Path = '/bin/fgrep' 
+let Egrep_Path = '/bin/egrep' 
+let Agrep_Path = '/usr/bin/agrep' 
+let Grep_Find_Path = '/usr/bin/find'
+let Grep_Xargs_Path = '/usr/bin/xargs'
+let Grep_Default_Options = '-i'
+
+nnoremap <silent> <F3> :Grep<CR>
+nnoremap <silent> <F4> :Rgrep<CR>
