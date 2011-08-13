@@ -165,7 +165,7 @@ hi Repeat ctermfg=cyan guifg=cyan
 
 " The last searched pattern or 
 " the line in the quickfix window and some similiar items that need to stand out
-hi Search ctermfg=cyan ctermbg=none guifg=cyan
+hi Search ctermfg=cyan ctermbg=darkred guifg=cyan
 
 " The line where the signs displayed,
 " the sign may be a breakpoint or an icon
