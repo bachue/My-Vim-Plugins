@@ -69,5 +69,3 @@ let Grep_Default_Options = '-i'
 
 nnoremap <silent> <F3> :Grep<CR>
 nnoremap <silent> <F4> :Rgrep<CR>
-
-let g:AutoClosePairs = {'(': ')', '{': '}', '[': ']', '"': '"', "'": "'", "<": ">"}
