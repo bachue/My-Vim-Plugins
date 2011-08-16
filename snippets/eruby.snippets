@@ -1,33 +1,35 @@
 # Eruby
 
 snippet each
-	<% ${1:collection}.each do |${2:member}| -%>
+	<% ${1:collection}.each do |${2:member}| %>
 		${3}
-	<% end -%>
+	<% end %>
+snippet %
+	<% ${1} %>
 snippet =
 	<%= ${1} %>
 snippet -
 	<% ${1} -%>
 snippet if
-	<% if ${1:cond} -%>
+	<% if ${1:cond} %>
 		${2}	
-	<% end -%>
+	<% end %>
 snippet unless
-	<% unless ${1:cond} -%>
+	<% unless ${1:cond} %>
 		${2}	
-	<% end -%>
+	<% end %>
 snippet ife
-	<% if ${1:cond} -%>
+	<% if ${1:cond} %>
 		${2}	
-	<% else -%>
+	<% else %>
 		${3}
-	<% end -%>
+	<% end %>
 snippet unlesse
-	<% unless ${1:cond} -%>
+	<% unless ${1:cond} %>
 		${2}	
-	<% else -%>
+	<% else %>
 		${3}
-	<% end -%>
+	<% end %>
 snippet yield
 	<%= yield :${1:partial} %>
 

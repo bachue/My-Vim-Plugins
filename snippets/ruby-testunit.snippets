@@ -53,4 +53,7 @@ snippet ast
 	assert_throws(:${1:expected}) { ${2} }
 snippet asnt
 	assert_nothing_thrown { ${1} }
-
+snippet test
+	test "should ${1}" do
+		${2}
+	end
