@@ -1,6 +1,7 @@
 colorscheme koehler
 
 set guifont=DejaVu\ Sans\ Mono\ 11
+set guifontwide=WenQuanYi\ Micro\ Hei
 set guioptions-=m
 set guioptions-=T
 set guioptions-=L
