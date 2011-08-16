@@ -51,6 +51,24 @@ snippet until
 	until ${1:condition}
 		${2}
 	end
+snippet begin begin .. end
+	begin
+		${1}
+	end
+snippet begin begin .. rescue .. end
+	begin
+		${1}
+	rescue ${2:exception}
+		${3}
+	end
+snippet begin begin .. rescue .. ensure .. end
+	begin
+		${1}
+	rescue ${2:exception}
+		${3}
+	ensure
+		${4}
+	end
 
 # Class and Module
 snippet cla class .. end
