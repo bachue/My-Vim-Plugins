@@ -7,6 +7,7 @@ set guioptions-=T
 set guioptions-=L
 set guioptions-=r
 set guioptions-=b
+set mouse=a
 map <silent> <F2> :if &guioptions =~# 'T' <Bar>
         \set guioptions-=T <Bar>
         \set guioptions-=m <bar>
@@ -14,4 +15,3 @@ map <silent> <F2> :if &guioptions =~# 'T' <Bar>
         \set guioptions+=T <Bar>
         \set guioptions+=m <Bar>
     \endif<CR>
-

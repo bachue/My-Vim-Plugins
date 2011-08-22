@@ -7,11 +7,15 @@ set sw=4
 set whichwrap=b,s,<,>,[,],h,l
 set hlsearch
 set hidden
-set mouse=a
+
+setlocal noswapfile
+set nobackup
 
 filetype on
 filetype plugin on
 filetype indent on
+
+set dictionary=/usr/share/dict/words
 
 set completeopt=longest,menu
 syntax enable
