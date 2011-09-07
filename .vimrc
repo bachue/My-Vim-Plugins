@@ -18,7 +18,7 @@ filetype indent on
 
 map <c-f> ggVG=
 
-set dictionary=/usr/share/dict/words
+"set dictionary=/usr/share/dict/words
 
 set completeopt+=longest,menu,preview
 syntax enable
@@ -78,3 +78,4 @@ let g:SuperTabCompletionContexts = ['s:ContextText', 's:ContextDiscover']
 let g:SuperTabContextDiscoverDiscovery = ["&completefunc:<c-x><c-u>", "&omnifunc:<c-x><c-o>"]
 
 let g:ragtag_global_maps = 1 
+let g:acp_behaviorSnipmateLength = 1
