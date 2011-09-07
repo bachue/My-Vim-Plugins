@@ -8,9 +8,9 @@ set guioptions-=L
 set guioptions-=r
 set guioptions-=b
 
-map <c-s-x> "+x
-map <c-s-c> "+y
-map <c-s-v> "+p
+map <c-x> "+x
+map <c-c> "+y
+map <c-v> "+p
 
 map <silent> <F2> :if &guioptions =~# 'T' <Bar>
         \set guioptions-=T <Bar>

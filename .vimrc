@@ -16,6 +16,8 @@ filetype on
 filetype plugin on
 filetype indent on
 
+map <c-f> ggVG=
+
 set dictionary=/usr/share/dict/words
 
 set completeopt=longest,menu
@@ -81,3 +83,12 @@ let g:neocomplcache_omni_patterns.c = '\%(\.\|->\)\h\w*'
 let g:neocomplcache_omni_patterns.cpp = '\h\w*\%(\.\|->\)\h\w*\|\h\w*::'
 
 let g:ragtag_global_maps = 1 
+
+function! Compile()
+	let name = expand('<afile>')
+	if name !~ 'spec'
+		CC
+	endif
+endfunction
+
+autocmd BufWritePost *.rb call Compile()
