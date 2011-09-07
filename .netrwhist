@@ -1,11 +1,4 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =9
-let g:netrw_dirhist_1='/home/bachue/.vim/autoload/neocomplcache/sources/vim_complete'
-let g:netrw_dirhist_2='/home/bachue/.vim/autoload/neocomplcache'
-let g:netrw_dirhist_3='/home/bachue/.vim/autoload/neocomplcache/sources'
-let g:netrw_dirhist_4='/home/bachue/.rvm/scripts'
-let g:netrw_dirhist_5='/etc/httpd/logs'
-let g:netrw_dirhist_6='/home/bachue/.vim/plugin'
-let g:netrw_dirhist_7='/tmp/temp'
-let g:netrw_dirhist_8='/home/bachue/workspace/depot'
-let g:netrw_dirhist_9='/home/bachue/.vim'
+let g:netrw_dirhist_cnt =2
+let g:netrw_dirhist_1='/home/bachue/.vim'
+let g:netrw_dirhist_2='/home/bachue/workspace/depot'
