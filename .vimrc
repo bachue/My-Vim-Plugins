@@ -7,6 +7,7 @@ set sw=4
 set whichwrap=b,s,<,>,[,],h,l
 set hlsearch
 set hidden
+set mouse=a
 
 setlocal noswapfile
 set nobackup

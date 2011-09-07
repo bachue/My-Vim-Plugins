@@ -7,7 +7,11 @@ set guioptions-=T
 set guioptions-=L
 set guioptions-=r
 set guioptions-=b
-set mouse=a
+
+map <c-s-x> "+x
+map <c-s-c> "+y
+map <c-s-v> "+p
+
 map <silent> <F2> :if &guioptions =~# 'T' <Bar>
         \set guioptions-=T <Bar>
         \set guioptions-=m <bar>
