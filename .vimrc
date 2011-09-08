@@ -16,6 +16,7 @@ filetype plugin on
 filetype indent on
 
 map <c-f> ggVG=
+nnoremap <silent> <F5> :!ruby %<CR>
 
 "set dictionary=/usr/share/dict/words
 
@@ -57,7 +58,7 @@ let g:miniBufExplMapWindowNavArrows = 1
 let g:miniBufExplMapCTabSwitchBufs = 1
 let g:miniBufExplModSelTarget = 1
 
-nnoremap <silent> <F5> :NERDTree<CR>
+nnoremap <silent> <F2> :NERDTree<CR>
 
 let Grep_Path = '/bin/grep'
 let Fgrep_Path = '/bin/fgrep' 
