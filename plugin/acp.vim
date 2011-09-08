@@ -49,23 +49,23 @@ function s:makeDefaultBehavior()
     endfor
   endif
   "---------------------------------------------------------------------------
-  for key in keys(behavs)
-    call add(behavs[key], {
-          \   'command'      : "\<C-x>\<C-u>",
-          \   'completefunc' : 'acp#completeSnipmate',
-          \   'meets'        : 'acp#meetsForSnipmate',
-          \   'onPopupClose' : 'acp#onPopupCloseSnipmate',
-          \   'repeat'       : 0,
-          \ })
-  endfor
+"  for key in keys(behavs)
+"    call add(behavs[key], {
+"          \   'command'      : "\<C-x>\<C-u>",
+"          \   'completefunc' : 'acp#completeSnipmate',
+"          \   'meets'        : 'acp#meetsForSnipmate',
+"          \   'onPopupClose' : 'acp#onPopupCloseSnipmate',
+"          \   'repeat'       : 0,
+"          \ })
+"  endfor
   "---------------------------------------------------------------------------
-  for key in keys(behavs)
-    call add(behavs[key], {
-          \   'command' : g:acp_behaviorKeywordCommand,
-          \   'meets'   : 'acp#meetsForKeyword',
-          \   'repeat'  : 0,
-          \ })
-  endfor
+"  for key in keys(behavs)
+"    call add(behavs[key], {
+"          \   'command' : g:acp_behaviorKeywordCommand,
+"          \   'meets'   : 'acp#meetsForKeyword',
+"          \   'repeat'  : 0,
+"          \ })
+"  endfor
   "---------------------------------------------------------------------------
   for key in keys(behavs)
     call add(behavs[key], {
