@@ -7,6 +7,7 @@ set guioptions-=T
 set guioptions-=L
 set guioptions-=r
 set guioptions-=b
+set mouse=a
 
 map <c-x> "+x
 map <c-c> "+y

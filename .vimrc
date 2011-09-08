@@ -7,7 +7,6 @@ set sw=4
 set whichwrap=b,s,<,>,[,],h,l
 set hlsearch
 set hidden
-set mouse=a
 
 setlocal noswapfile
 set nobackup
@@ -79,3 +78,6 @@ let g:SuperTabContextDiscoverDiscovery = ["&completefunc:<c-x><c-u>", "&omnifunc
 
 let g:ragtag_global_maps = 1 
 let g:acp_behaviorSnipmateLength = 1
+
+set laststatus=2
+set statusline=%F%m%r%h%w\ [%{&ff}]\ [%Y]\ [%{(&fenc==\"\")?&enc:&fenc}%{(&bomb?\",BOM\":\"\")}]\ [ASCII=\%03.3b]\ [HEX=\%02.2B]\ [POS=%04l,%04v][%p%%]\ [LEN=%L]\ %=[%{GitBranch()}]
