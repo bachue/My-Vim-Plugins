@@ -61,6 +61,15 @@ snippet begin begin .. rescue .. end
 	rescue ${2:exception}
 		${3}
 	end
+snippet begin begin .. rescue .. else .. end
+	begin
+		${1}
+	rescue ${2:exception}
+		${3}
+	else
+		${4}
+	end
+
 snippet begin begin .. rescue .. ensure .. end
 	begin
 		${1}
@@ -68,6 +77,17 @@ snippet begin begin .. rescue .. ensure .. end
 		${3}
 	ensure
 		${4}
+	end
+
+snippet begin begin .. rescue .. else .. ensure .. end
+	begin
+		${1}
+	rescue ${2:exception}
+		${3}
+	else
+		${4}
+	ensure
+		${5}
 	end
 
 # Class and Module
