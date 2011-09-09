@@ -58,7 +58,7 @@ let g:miniBufExplMapWindowNavArrows = 1
 let g:miniBufExplMapCTabSwitchBufs = 1
 let g:miniBufExplModSelTarget = 1
 
-nnoremap <silent> <F2> :NERDTree<CR>
+nnoremap <silent> <F3> :NERDTree<CR>
 
 let Grep_Path = '/bin/grep'
 let Fgrep_Path = '/bin/fgrep' 
@@ -68,7 +68,6 @@ let Grep_Find_Path = '/usr/bin/find'
 let Grep_Xargs_Path = '/usr/bin/xargs'
 let Grep_Default_Options = '-i'
 
-nnoremap <silent> <F3> :Grep<CR>
 nnoremap <silent> <F4> :Rgrep<CR>
 
 let g:SuperTabDefaultCompletionType = "context"
