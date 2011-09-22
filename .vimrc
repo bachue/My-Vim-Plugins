@@ -8,6 +8,9 @@ set whichwrap=b,s,<,>,[,],h,l
 set hlsearch
 set hidden
 
+set undodir=~/.tmp/undodir
+set undofile
+
 setlocal noswapfile
 set nobackup
 
