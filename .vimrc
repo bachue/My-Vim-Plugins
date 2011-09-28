@@ -11,8 +11,10 @@ set hidden
 set undodir=~/.tmp/undodir
 set undofile
 
-setlocal noswapfile
-set nobackup
+set directory=~/.tmp/swapdir
+
+set backup
+set backupdir=~/.tmp/backupdir
 
 filetype on
 filetype plugin on
