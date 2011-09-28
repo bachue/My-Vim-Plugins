@@ -18,6 +18,8 @@ filetype on
 filetype plugin on
 filetype indent on
 
+autocmd BufEnter * silent! lcd %:p:h
+
 map <c-f> ggVG=
 nnoremap <silent> <F5> :!ruby %<CR>
 

@@ -18,3 +18,12 @@ snippet scen
 			 Given ${2:[given]}
 			 When ${3:[when]}
 			 Then ${4:[then]}
+snippet sceno
+	Scenario Outline: ${1:[scenario outline name]}
+			 Given ${2:[given]}<${3:[given content]}>
+			 When ${4:[when]}<${5:[when what happen]}>
+			 Then ${6:[then]}<${7:[then what will happen]}>
+
+			Scenarios: ${8:[scenarios name]}
+			 | $3 | $5 | $7 |
+			 | ${9:[given content 1]} | ${10:[when what happen 1]} | ${11:[then what will happen 1]} |
