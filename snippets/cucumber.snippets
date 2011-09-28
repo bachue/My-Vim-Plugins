@@ -1,0 +1,29 @@
+snippet feature
+	Feature: ${1:[feature name eg. "Manage some thing ..."]}
+			 In order to ${2:[goal]}
+			 As a ${3:[stakeholder]}
+			 I want ${4:[behavior]}
+snippet fea
+	Feature: ${1:[feature name eg. "Manage some thing ..."]}
+			 In order to ${2:[goal]}
+			 As a ${3:[stakeholder]}
+			 I want ${4:[behavior]}
+snippet scenario
+	Scenario: ${1:[scenario name]}
+			 Given ${2:[given]}
+			 When ${3:[when]}
+			 Then ${4:[then]}
+snippet scen
+	Scenario: ${1:[scenario name]}
+			 Given ${2:[given]}
+			 When ${3:[when]}
+			 Then ${4:[then]}
+snippet sceno
+	Scenario Outline: ${1:[scenario outline name]}
+			 Given ${2:[given]}<${3:[given content]}>
+			 When ${4:[when]}<${5:[when what happen]}>
+			 Then ${6:[then]}<${7:[then what will happen]}>
+
+			Scenarios: ${8:[scenarios name]}
+			 | $3 | $5 | $7 |
+			 | ${9:[given content 1]} | ${10:[when what happen 1]} | ${11:[then what will happen 1]} |

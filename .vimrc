@@ -11,12 +11,16 @@ set hidden
 set undodir=~/.tmp/undodir
 set undofile
 
-setlocal noswapfile
-set nobackup
+set directory=~/.tmp/swapdir
+
+set backup
+set backupdir=~/.tmp/backupdir
 
 filetype on
 filetype plugin on
 filetype indent on
+
+autocmd BufEnter * silent! lcd %:p:h
 
 map <c-f> ggVG=
 nnoremap <silent> <F5> :!ruby %<CR>
