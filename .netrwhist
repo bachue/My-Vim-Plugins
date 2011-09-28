@@ -1,5 +1,5 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =8
+let g:netrw_dirhist_cnt =9
 let g:netrw_dirhist_1='/home/bachue/workspace/sample_app/spec/routing'
 let g:netrw_dirhist_2='/home/bachue/.rvm/gems/ruby-1.9.2-p290@rails3/gems/rspec-rails-2.6.1'
 let g:netrw_dirhist_3='/home/bachue/.gitconf'
@@ -8,3 +8,4 @@ let g:netrw_dirhist_5='/home/bachue/.rvm/gems/ruby-1.9.2-p290@rails3/gems/factor
 let g:netrw_dirhist_6='/home/bachue/workspace/omniauth-test'
 let g:netrw_dirhist_7='/home/bachue/.rvm/gems/ruby-1.9.2-p290@rails3/gems/devise-1.4.5/app/controllers'
 let g:netrw_dirhist_8='/home/bachue/workspace/sample_app'
+let g:netrw_dirhist_9='/home/bachue/workspace/people-squared'
