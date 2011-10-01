@@ -44,6 +44,7 @@ endif
 autocmd FileType * setl omnifunc=nullcomplete#Complete
 autocmd FileType python setl omnifunc=pythoncomplete#Complete
 autocmd FileType javascript setl omnifunc=javascriptcomplete#CompleteJS
+autocmd FileType java set omnifunc=javacomplete#Complete
 autocmd FileType html setl omnifunc=htmlcomplete#CompleteTags noci
 autocmd FileType css setl omnifunc=csscomplete#CompleteCSS noci
 autocmd FileType xml setl omnifunc=xmlcomplete#CompleteTags
