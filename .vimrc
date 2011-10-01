@@ -11,14 +11,17 @@ set hidden
 set undodir=~/.tmp/undodir
 set undofile
 
-setlocal noswapfile
-set nobackup
+set directory=~/.tmp/swapdir
+
+set backup
+set backupdir=~/.tmp/backupdir
 
 filetype on
 filetype plugin on
 filetype indent on
 
-map <c-f> ggVG=
+autocmd BufEnter * silent! lcd %:p:h
+
 nnoremap <silent> <F5> :!ruby %<CR>
 
 "set dictionary=/usr/share/dict/words
@@ -60,6 +63,7 @@ let g:miniBufExplMapWindowNavVim = 1
 let g:miniBufExplMapWindowNavArrows = 1
 let g:miniBufExplMapCTabSwitchBufs = 1
 let g:miniBufExplModSelTarget = 1
+let g:miniBufExplorerMoreThanOne=0
 
 nnoremap <silent> <F3> :NERDTree<CR>
 
