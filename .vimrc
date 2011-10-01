@@ -63,6 +63,7 @@ let g:miniBufExplMapWindowNavVim = 1
 let g:miniBufExplMapWindowNavArrows = 1
 let g:miniBufExplMapCTabSwitchBufs = 1
 let g:miniBufExplModSelTarget = 1
+let g:miniBufExplorerMoreThanOne=0
 
 nnoremap <silent> <F3> :NERDTree<CR>
 
