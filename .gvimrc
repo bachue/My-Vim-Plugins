@@ -20,3 +20,5 @@ map <silent> <F2> :if &guioptions =~# 'm' <Bar>
     \else <Bar>
         \set guioptions+=m <Bar>
     \endif<CR>
+
+let Tlist_Show_Menu = 1

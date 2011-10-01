@@ -22,7 +22,7 @@ filetype indent on
 
 autocmd BufEnter * silent! lcd %:p:h
 
-nnoremap <silent> <F5> :!ruby %<CR>
+nnoremap <silent> <F5> :TlistToggle <CR>
 
 "set dictionary=/usr/share/dict/words
 
@@ -88,3 +88,7 @@ let g:acp_behaviorSnipmateLength = 1
 
 set laststatus=2
 set statusline=%F%m%r%h%w\ [%{&ff}]\ [%Y]\ [%{(&fenc==\"\")?&enc:&fenc}%{(&bomb?\",BOM\":\"\")}]\ [ASCII=\%03.3b]\ [HEX=\%02.2B]\ [POS=%04l,%04v][%p%%]\ [LEN=%L]\ %=[%{GitBranch()}]
+
+let Tlist_Use_Right_Window = 1
+let Tlist_Use_SingleClick = 1
+autocmd BufWritePost * :TlistUpdate
