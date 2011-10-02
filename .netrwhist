@@ -1,8 +1,0 @@
-let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =6
-let g:netrw_dirhist_1='/home/bachue/.vim'
-let g:netrw_dirhist_2='/home/bachue/workspace/depot'
-let g:netrw_dirhist_3='/tmp/git-vim'
-let g:netrw_dirhist_4='/home/bachue/.ssh'
-let g:netrw_dirhist_5='/home/bachue/.zshconf'
-let g:netrw_dirhist_6='/home/bachue/.gem'
