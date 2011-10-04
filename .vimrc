@@ -92,3 +92,7 @@ set statusline=%F%m%r%h%w\ [%{&ff}]\ [%Y]\ [%{(&fenc==\"\")?&enc:&fenc}%{(&bomb?
 let Tlist_Use_Right_Window = 1
 let Tlist_Use_SingleClick = 1
 autocmd BufWritePost * :TlistUpdate
+
+autocmd VimEnter * :Alias q qall
+autocmd VimEnter * :Alias wq wqall
+autocmd VimEnter * :Alias W w
