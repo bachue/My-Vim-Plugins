@@ -57,6 +57,12 @@ snippet itshbe
   		${2:model}.should be_${3}
 	end
 
+# context
+snippet context
+	context "${1:description}" do
+		${2}
+	end
+
 # matchers
 snippet sheq
 	${1:targe}.should == ${2}
