@@ -55,6 +55,7 @@ autocmd FileType ruby,eruby let g:rubycomplete_rails = 1
 autocmd FileType ruby,eruby let g:rubycomplete_classes_in_global = 1
 autocmd FileType ruby,eruby let g:rubycomplete_include_object = 1
 autocmd FileType ruby,eruby let g:rubycomplete_include_objectspace = 1
+autocmd FileType ruby,cucumber set ts=2 sw=2 expandtab
 
 set t_Co=256
 colorscheme wargrey
