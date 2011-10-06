@@ -7,6 +7,27 @@ set sw=4
 set whichwrap=b,s,<,>,[,],h,l
 set hlsearch
 set hidden
+set incsearch
+set linebreak
+set showbreak=>>
+set smartindent
+set wildmenu
+set wildmode=list:longest,full
+set switchbuf=usetab,newtab
+
+map <C-Tab> gt
+imap <C-Tab> <Esc>gt
+cmap <C-Tab> <Esc>gt
+
+map <C-S-Tab> gT
+imap <C-S-Tab> <Esc>gT
+cmap <C-S-Tab> <Esc>gT
+
+for i in [1, 2, 3, 4, 5, 6, 7, 8, 9]
+	execute 'map <M-' . i . '> ' . i . 'gt'
+	execute 'imap <M-' . i . '> <Esc>' . i . 'gt'
+	execute 'cmap <M-' . i . '> <Esc>' . i . 'gt'
+endfor
 
 set undodir=~/.tmp/undodir
 set undofile
@@ -15,6 +36,26 @@ set directory=~/.tmp/swapdir
 
 set backup
 set backupdir=~/.tmp/backupdir
+
+noremap <C-J> <C-W>j
+noremap <C-K> <C-W>k
+noremap <C-H> <C-W>h
+noremap <C-L> <C-W>l
+
+noremap <C-Down> <C-W>j
+noremap <C-Right> <C-W>k
+noremap <C-Left> <C-W>h
+noremap <C-Right> <C-W>l
+
+nmap ,& /<C-R><C-W><CR>
+nmap ,* :%s/<C-R><C-W>/
+
+" ALT-[1-9] is switch to specified tab
+for i in [1, 2, 3, 4, 5, 6, 7, 8, 9]
+	execute 'map <M-' . i . '> ' . i . 'gt'
+	execute 'imap <M-' . i . '> <Esc>' . i . 'gt'
+	execute 'cmap <M-' . i . '> <Esc>' . i . 'gt'
+endfor
 
 filetype on
 filetype plugin on
@@ -77,6 +118,9 @@ let Grep_Xargs_Path = '/usr/bin/xargs'
 let Grep_Default_Options = '-i'
 
 nnoremap <silent> <F4> :Rgrep<CR>
+
+map <F6> :BufExplorer<CR>
+imap <F6> <Esc><F6>
 
 let g:SuperTabDefaultCompletionType = "context"
 let g:SuperTabContextDefaultCompletionType = "<c-x><c-o>"
