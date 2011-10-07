@@ -106,12 +106,6 @@ autocmd FileType ruby,cucumber set ts=2 sw=2 expandtab
 set t_Co=256
 colorscheme wargrey
 
-let g:miniBufExplMapWindowNavVim = 1
-let g:miniBufExplMapWindowNavArrows = 1
-let g:miniBufExplMapCTabSwitchBufs = 1
-let g:miniBufExplModSelTarget = 1
-let g:miniBufExplorerMoreThanOne=0
-
 nnoremap <silent> <F3> :NERDTree<CR>
 
 let Grep_Path = '/bin/grep'
