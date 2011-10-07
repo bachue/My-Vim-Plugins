@@ -43,12 +43,17 @@ noremap <C-H> <C-W>h
 noremap <C-L> <C-W>l
 
 noremap <C-Down> <C-W>j
-noremap <C-Right> <C-W>k
+noremap <C-Up> <C-W>k
 noremap <C-Left> <C-W>h
 noremap <C-Right> <C-W>l
 
 nmap ,& /<C-R><C-W><CR>
 nmap ,* :%s/<C-R><C-W>/
+
+nmap gi :GitCommit<CR>
+nmap gd :GitDiff<CR>
+nmap gs :GitStatus<CR>
+nmap gp :GitPush<CR>
 
 " ALT-[1-9] is switch to specified tab
 for i in [1, 2, 3, 4, 5, 6, 7, 8, 9]

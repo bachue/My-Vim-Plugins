@@ -1144,7 +1144,7 @@ call s:BESet("g:bufExplorerSortBy", "mru")            " Sorting methods are in s
 call s:BESet("g:bufExplorerSplitOutPathName", 1)      " Split out path and file name?
 call s:BESet("g:bufExplorerSplitRight", &splitright)  " Should vertical splits be on the right or left of current window?
 call s:BESet("g:bufExplorerSplitBelow", &splitbelow)  " Should horizontal splits be below or above current window?
-call s:BESet("g:bufExplorerShowTabBuffer", 0)         " Show only buffer(s) for this tab?
+call s:BESet("g:bufExplorerShowTabBuffer", 1)         " Show only buffer(s) for this tab?
 call s:BESet("g:bufExplorerOnlyOneTab", 1)            " If ShowTabBuffer = 1, only store the most recent tab for this buffer.
 
 " Global variables {{{1

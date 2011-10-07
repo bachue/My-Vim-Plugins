@@ -12,8 +12,8 @@ map <C-X> "+x
 map <C-C> "+y
 map <C-P> "+p
 
-nnoremap <silent> <F6> :promptfind <CR>
-nnoremap <silent> <F7> :promptrepl <CR>
+nnoremap <silent> <F7> :promptfind <CR>
+nnoremap <silent> <F8> :promptrepl <CR>
 
 map <silent> <F2> :if &guioptions =~# 'm' <Bar>
         \set guioptions-=m <bar>
