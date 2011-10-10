@@ -11,9 +11,15 @@ set incsearch
 set linebreak
 set showbreak=>>
 set smartindent
+set cindent
+set cinoptions={0,1s,t0,n-2,p2s,(03s,=.5s,>1s,=1s,:1s)}
 set wildmenu
 set wildmode=list:longest,full
 set switchbuf=usetab,newtab
+
+set tags=./tags
+set tags+=~/.vim/cpptags
+set tags+=~/.vim/systags
 
 map <C-Tab> gt
 imap <C-Tab> <Esc>gt
@@ -140,3 +146,34 @@ autocmd BufWritePost * :TlistUpdate
 autocmd VimEnter * :Alias q qall
 autocmd VimEnter * :Alias wq wqall
 autocmd VimEnter * :Alias W w
+
+au BufNewFile,BufRead,BufEnter *.cpp,*.hpp set omnifunc=omni#cpp#complete#Main
+
+map <F11> :!ctags -R --sort=yes --c++-kinds=+p --fields=+iaS --extra=+q .<CR>
+
+let OmniCpp_NamespaceSearch = 1
+let OmniCpp_GlobalScopeSearch = 1
+let OmniCpp_ShowAccess = 1
+let OmniCpp_ShowPrototypeInAbbr = 1 " show function parameters
+let OmniCpp_MayCompleteDot = 1 " autocomplete after .
+let OmniCpp_MayCompleteArrow = 1 " autocomplete after ->
+let OmniCpp_MayCompleteScope = 1 " autocomplete after ::
+let OmniCpp_DefaultNamespaces = ["std", "_GLIBCXX_STD"]"
+
+cnoreabbrev csa cs add
+cnoreabbrev csf cs find
+cnoreabbrev csk cs kill
+cnoreabbrev csr cs reset
+cnoreabbrev css cs show
+cnoreabbrev csh cs help
+
+nnoremap <silent> <F12> :call Do_CsTag() <CR>
+function Do_CsTag()
+	if(executable('cscope') && has("cscope") )
+		silent! execute "!find . -name '*.h' -o -name '*.c' -o -name '*.cpp' -o -name '*.java' -o -name '*.cs' -o -name '*.cxx' -o -name '*.hxx'> cscope.files"
+		silent! execute "!cscope -bq"
+		if filereadable("cscope.out")
+			execute "cs add cscope.out"
+		endif
+	endif
+endf

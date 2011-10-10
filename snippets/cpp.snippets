@@ -1,3 +1,6 @@
+# #include <...>
+snippet incl
+	#include <${1:iostream}>${2}
 # Read File Into Vector
 snippet readfile
 	std::vector<char> v;
@@ -13,6 +16,9 @@ snippet map
 # std::vector
 snippet vector
 	std::vector<${1:char}> v${2};
+# std::string
+snippet string
+	std::string s${1};
 # Namespace
 snippet ns
 	namespace ${1:`Filename('', 'my')`} {
