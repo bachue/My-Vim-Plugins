@@ -149,7 +149,7 @@ autocmd VimEnter * :Alias W w
 
 au BufNewFile,BufRead,BufEnter *.c,*.h,*.cpp,*.hpp set omnifunc=omni#cpp#complete#Main
 
-map <F11> :!ctags -R --sort=yes --c++-kinds=+p --fields=+iaS --extra=+q .<CR>
+map <F12> :!ctags -R --sort=yes --c++-kinds=+p --fields=+iaS --extra=+q .<CR>
 
 let OmniCpp_NamespaceSearch = 1
 let OmniCpp_GlobalScopeSearch = 1
@@ -159,21 +159,3 @@ let OmniCpp_MayCompleteDot = 1 " autocomplete after .
 let OmniCpp_MayCompleteArrow = 1 " autocomplete after ->
 let OmniCpp_MayCompleteScope = 1 " autocomplete after ::
 let OmniCpp_DefaultNamespaces = ["std", "_GLIBCXX_STD"]"
-
-cnoreabbrev csa cs add
-cnoreabbrev csf cs find
-cnoreabbrev csk cs kill
-cnoreabbrev csr cs reset
-cnoreabbrev css cs show
-cnoreabbrev csh cs help
-
-nnoremap <silent> <F12> :call Do_CsTag() <CR>
-function Do_CsTag()
-	if(executable('cscope') && has("cscope") )
-		silent! execute "!find . -name '*.h' -o -name '*.c' -o -name '*.cpp' -o -name '*.java' -o -name '*.cs' -o -name '*.cxx' -o -name '*.hxx'> cscope.files"
-		silent! execute "!cscope -bq"
-		if filereadable("cscope.out")
-			execute "cs add cscope.out"
-		endif
-	endif
-endf
