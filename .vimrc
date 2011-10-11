@@ -100,7 +100,6 @@ autocmd FileType html setl omnifunc=htmlcomplete#CompleteTags noci
 autocmd FileType css setl omnifunc=csscomplete#CompleteCSS noci
 autocmd FileType xml setl omnifunc=xmlcomplete#CompleteTags
 autocmd FileType php setl omnifunc=phpcomplete#CompletePHP
-autocmd FileType c setl omnifunc=ccomplete#Complete
 autocmd FileType ruby,eruby set omnifunc=rubycomplete#Complete
 autocmd FileType ruby,eruby let g:rubycomplete_buffer_loading = 1
 autocmd FileType ruby,eruby let g:rubycomplete_rails = 1
@@ -147,7 +146,7 @@ autocmd VimEnter * :Alias q qall
 autocmd VimEnter * :Alias wq wqall
 autocmd VimEnter * :Alias W w
 
-au BufNewFile,BufRead,BufEnter *.cpp,*.hpp set omnifunc=omni#cpp#complete#Main
+au BufNewFile,BufRead,BufEnter *.c,*.h,*.cpp,*.hpp set omnifunc=omni#cpp#complete#Main
 
 map <F11> :!ctags -R --sort=yes --c++-kinds=+p --fields=+iaS --extra=+q .<CR>
 
