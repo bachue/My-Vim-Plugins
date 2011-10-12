@@ -53,8 +53,8 @@ noremap <C-Up> <C-W>k
 noremap <C-Left> <C-W>h
 noremap <C-Right> <C-W>l
 
-nmap ,& /<C-R><C-W><CR>
-nmap ,* :%s/<C-R><C-W>/
+nmap ,7 /<C-R><C-W><CR>
+nmap ,8 :%s/<C-R><C-W>/
 
 nmap gi :GitCommit<CR>
 nmap gd :GitDiff<CR>
@@ -74,6 +74,7 @@ filetype indent on
 
 autocmd BufEnter * silent! lcd %:p:h
 
+nnoremap <silent> <F2> ggVG=
 nnoremap <silent> <F5> :TlistToggle <CR>
 
 "set dictionary=/usr/share/dict/words
@@ -109,10 +110,18 @@ autocmd FileType ruby,eruby let g:rubycomplete_include_object = 1
 autocmd FileType ruby,eruby let g:rubycomplete_include_objectspace = 1
 autocmd FileType ruby,cucumber set ts=2 sw=2 expandtab
 
+function! s:BufEnterRails()
+	if exists('b:rails_root')
+		let g:rails_root_dir = b:rails_root
+	endif
+endfunction
+
+autocmd User BufEnterRails call s:BufEnterRails()
+
 set t_Co=256
 colorscheme wargrey
 
-nnoremap <silent> <F3> :NERDTree<CR>
+nnoremap <silent> <F3> :NERDTreeToggle<CR>
 
 let Grep_Path = '/bin/grep'
 let Fgrep_Path = '/bin/fgrep' 
@@ -124,8 +133,8 @@ let Grep_Default_Options = '-i'
 
 nnoremap <silent> <F4> :Rgrep<CR>
 
-map <F6> :BufExplorer<CR>
-imap <F6> <Esc><F6>
+map <F1> :BufExplorer<CR>
+imap <F1> <Esc><F1>
 
 let g:SuperTabDefaultCompletionType = "context"
 let g:SuperTabContextDefaultCompletionType = "<c-x><c-o>"

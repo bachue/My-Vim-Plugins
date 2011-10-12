@@ -1,7 +1,7 @@
 colorscheme koehler
 
 set guifont=DejaVu\ Sans\ Mono\ 11
-set guifontwide=WenQuanYi\ Micro\ Hei
+set guifontwide=WenQuanYi\ Micro\ Hei\ 13
 set guioptions-=T
 set guioptions-=L
 set guioptions-=r
@@ -14,11 +14,5 @@ map <C-P> "+p
 
 nnoremap <silent> <F7> :promptfind <CR>
 nnoremap <silent> <F8> :promptrepl <CR>
-
-map <silent> <F2> :if &guioptions =~# 'm' <Bar>
-        \set guioptions-=m <bar>
-    \else <Bar>
-        \set guioptions+=m <Bar>
-    \endif<CR>
 
 let Tlist_Show_Menu = 1
