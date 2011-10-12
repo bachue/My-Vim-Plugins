@@ -156,6 +156,9 @@ autocmd VimEnter * :Alias q qall
 autocmd VimEnter * :Alias wq wqall
 autocmd VimEnter * :Alias W w
 autocmd VimEnter * :Alias diff diffsplit
+autocmd VimEnter *.rb :call CmdAlias('ruby', '!ruby %')
+autocmd VimEnter *.rb :call CmdAlias('rspec', '!rspec %')
+autocmd VimEnter *.feature :call CmdAlias('cucumber', '!cucumber %')
 
 au BufNewFile,BufRead,BufEnter *.c,*.h,*.cpp,*.hpp set omnifunc=omni#cpp#complete#Main
 
