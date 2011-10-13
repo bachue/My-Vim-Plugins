@@ -108,7 +108,7 @@ autocmd FileType ruby,eruby let g:rubycomplete_rails = 1
 autocmd FileType ruby,eruby let g:rubycomplete_classes_in_global = 1
 autocmd FileType ruby,eruby let g:rubycomplete_include_object = 1
 autocmd FileType ruby,eruby let g:rubycomplete_include_objectspace = 1
-autocmd FileType ruby,cucumber set ts=2 sw=2 expandtab
+autocmd FileType ruby,cucumber set ts=2 sw=2 sts=2 expandtab
 
 function! s:BufEnterRails()
 	if exists('b:rails_root')
