@@ -53,8 +53,8 @@ noremap <C-Up> <C-W>k
 noremap <C-Left> <C-W>h
 noremap <C-Right> <C-W>l
 
-nmap ,7 /<C-R><C-W><CR>
-nmap ,8 :%s/<C-R><C-W>/
+nnoremap <F7> /<C-R><C-W><CR>
+nnoremap <F8> :%s/<C-R><C-W>/
 
 nmap gi :GitCommit<CR>
 nmap gd :GitDiff<CR>
@@ -152,13 +152,13 @@ let Tlist_Use_Right_Window = 1
 let Tlist_Use_SingleClick = 1
 autocmd BufWritePost * :TlistUpdate
 
-autocmd VimEnter * :Alias q qall
-autocmd VimEnter * :Alias wq wqall
-autocmd VimEnter * :Alias W w
-autocmd VimEnter * :Alias diff diffsplit
-autocmd VimEnter *.rb :call CmdAlias('ruby', '!ruby %')
-autocmd VimEnter *.rb :call CmdAlias('rspec', '!rspec %')
-autocmd VimEnter *.feature :call CmdAlias('cucumber', '!cucumber %')
+autocmd BufEnter * :Alias q qall
+autocmd BufEnter * :Alias wq wqall
+autocmd BufEnter * :Alias W w
+autocmd BufEnter * :Alias diff diffsplit
+autocmd BufEnter *.rb :call CmdAlias('ruby', '!ruby %')
+autocmd BufEnter *.rb :call CmdAlias('rspec', '!rspec % --format doc --no-color')
+autocmd BufEnter *.feature :call CmdAlias('cu', '!cucumber %')
 
 au BufNewFile,BufRead,BufEnter *.c,*.h,*.cpp,*.hpp set omnifunc=omni#cpp#complete#Main
 
