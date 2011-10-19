@@ -1,9 +1,9 @@
 # TestUnit
 
 snippet tc
-	require \"test/unit\"
+	require \'test/unit\'
 	
-	require \"${1:library_file_name}\"
+	require \'${1:library_file_name}\'
 	
 	class Test${2:$1} < Test::Unit::TestCase
 		def test_${3:case_name}
@@ -11,12 +11,12 @@ snippet tc
 		end
 	end
 snippet ts
-	require \"test/unit\"
+	require \'test/unit\'
 	
-	require \"tc_${1:test_case_file}\"
-	require \"tc_${2:test_case_file}\"${3}
+	require \'tc_${1:test_case_file}\'
+	require \'tc_${2:test_case_file}\'${3}
 snippet as
-	assert(${1:test}, \"${2:Failure message.}\")${3}
+	assert(${1:test}, \'${2:Failure message.}\')${3}
 snippet ase
 	assert_equal(${1:expected}, ${2:actual})${3}
 snippet asne
@@ -54,6 +54,6 @@ snippet ast
 snippet asnt
 	assert_nothing_thrown { ${1} }
 snippet test
-	test "should ${1}" do
+	test 'should ${1}' do
 		${2}
 	end

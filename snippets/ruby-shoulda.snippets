@@ -2,13 +2,13 @@
 
 # macros
 snippet shc shoulda macros should_change
-	should_change "${1:expression}"
+	should_change '${1:expression}'
 snippet shcb
-	should_change "${1:expression}", :by => ${2:by}
+	should_change '${1:expression}', :by => ${2:by}
 snippet shcft
-	should_change "${1:expression}", :from => ${2:from}, :to => ${3:to}
+	should_change '${1:expression}', :from => ${2:from}, :to => ${3:to}
 snippet shnotc
-	should_not_change "${1:expression}"
+	should_not_change '${1:expression}'
 
 # shoulda validation macros
 snippet shalvf
@@ -68,7 +68,7 @@ snippet shss
 snippet shflp
 	should_filter_params :${1:password}
 snippet shred
-	should_redirect_to "${1}"
+	should_redirect_to '${1}'
 snippet shrend
 	should_render_template :${1}
 snippet shrewol
@@ -76,7 +76,7 @@ snippet shrewol
 snippet shres
 	should_respond_with :${1:success}
 snippet shroute
-	should_route :${1:method}, "${2:path}", :action => :${3}
+	should_route :${1:method}, '${2:path}', :action => :${3}
 
 # Shoulda view macros
 snippet shrenderaform
@@ -86,13 +86,13 @@ snippet shrender_page_with_metadata
 
 # shoulda contexts
 snippet cont
-	context "${1:description}" do
+	context '${1:description}' do
 		setup do
 			${2}
 		end
 	end
 snippet sh
-	should "${1:description}" do
+	should '${1:description}' do
 		${2}
 	end
 
