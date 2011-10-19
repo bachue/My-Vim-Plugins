@@ -1,5 +1,8 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =3
+let g:netrw_dirhist_cnt =6
 let g:netrw_dirhist_1='/home/bachue/.gitconf'
 let g:netrw_dirhist_2='/home/bachue/workspace/rspec_test/codebreaker/features'
 let g:netrw_dirhist_3='/home/bachue/.vim/snippets'
+let g:netrw_dirhist_4='/home/bachue/workspace/people-squared'
+let g:netrw_dirhist_5='/media/cdrom0'
+let g:netrw_dirhist_6='/home/bachue/workspace/people-squared'
