@@ -1,4 +1,8 @@
 set nocp
+filetype off                   " required!
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+source ~/.vim/vundle.vim
 set nu
 set autoindent
 set ts=4
@@ -172,3 +176,19 @@ let OmniCpp_MayCompleteDot = 1 " autocomplete after .
 let OmniCpp_MayCompleteArrow = 1 " autocomplete after ->
 let OmniCpp_MayCompleteScope = 1 " autocomplete after ::
 let OmniCpp_DefaultNamespaces = ["std", "_GLIBCXX_STD"]"
+
+" ,t ,b is activate Command-T
+function! s:ProjectRoot()
+  if exists('b:rails_root')
+    return b:rails_root
+  elseif exists('b:bundler_root')
+    return b:bundler_root
+  elseif exists('b:rake_root')
+    return b:rake_root
+  elseif exists('b:git_dir')
+    return fnamemodify(b:git_dir, ':p:h:h')
+  endif
+endfunction
+
+nmap ,t :execute 'CommandT ' . fnameescape(<SID>ProjectRoot())<CR>
+nmap ,b :CommandTBuffer<CR>
