@@ -60,11 +60,6 @@ noremap <C-Right> <C-W>l
 nnoremap <F7> /<C-R><C-W><CR>
 nnoremap <F8> :%s/<C-R><C-W>/
 
-nmap gi :GitCommit<CR>
-nmap gd :GitDiff<CR>
-nmap gs :GitStatus<CR>
-nmap gp :GitPush<CR>
-
 " ALT-[1-9] is switch to specified tab
 for i in [1, 2, 3, 4, 5, 6, 7, 8, 9]
 	execute 'map <M-' . i . '> ' . i . 'gt'
@@ -150,7 +145,7 @@ let g:ragtag_global_maps = 1
 let g:acp_behaviorSnipmateLength = 1
 
 set laststatus=2
-set statusline=%F%m%r%h%w\ [%{&ff}]\ [%Y]\ [%{(&fenc==\"\")?&enc:&fenc}%{(&bomb?\",BOM\":\"\")}]\ [ASCII=\%03.3b]\ [HEX=\%02.2B]\ [POS=%04l,%04v][%p%%]\ [LEN=%L]\ %=[%{GitBranch()}]
+set statusline=%F%m%r%h%w\ [%{&ff}]\ [%Y]\ [%{(&fenc==\"\")?&enc:&fenc}%{(&bomb?\",BOM\":\"\")}]\ [ASCII=\%03.3b]\ [HEX=\%02.2B]\ [POS=%04l,%04v][%p%%]\ [LEN=%L]\ %=[%{fugitive#statusline()}]
 
 let Tlist_Use_Right_Window = 1
 let Tlist_Use_SingleClick = 1
