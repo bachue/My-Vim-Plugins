@@ -1,1 +1,8 @@
 Bundle 'https://github.com/rainux/Command-T.git'
+Bundle 'https://github.com/tpope/vim-fugitive.git'
+Bundle 'https://github.com/tpope/vim-rails.git'
+Bundle 'https://github.com/tpope/vim-cucumber.git'
+Bundle 'https://github.com/tpope/vim-surround.git'
+Bundle 'https://github.com/tpope/vim-abolish'
+Bundle 'https://github.com/tpope/vim-markdown'
+Bundle 'https://github.com/tpope/vim-bundler'
