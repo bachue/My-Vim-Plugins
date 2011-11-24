@@ -60,6 +60,8 @@ noremap <C-Right> <C-W>l
 nnoremap <F7> /<C-R><C-W><CR>
 nnoremap <F8> :%s/<C-R><C-W>/
 
+noremap <C-W> :clo<CR>
+
 " ALT-[1-9] is switch to specified tab
 for i in [1, 2, 3, 4, 5, 6, 7, 8, 9]
 	execute 'map <M-' . i . '> ' . i . 'gt'
@@ -139,7 +141,7 @@ let g:SuperTabDefaultCompletionType = "context"
 let g:SuperTabContextDefaultCompletionType = "<c-x><c-o>"
 let g:SuperTabContextTextOmniPrecedence = ['&omnifunc', '&completefunc']
 let g:SuperTabCompletionContexts = ['s:ContextText', 's:ContextDiscover']
-let g:SuperTabContextDiscoverDiscovery = ["&completefunc:<c-x><c-u>", "&omnifunc:<c-x><c-o>"]
+let g:SuperTabContextDiscoverDiscovery = ["&omnifunc:<c-x><c-o>", "&completefunc:<c-x><c-u>"]
 
 let g:ragtag_global_maps = 1 
 let g:acp_behaviorSnipmateLength = 1
