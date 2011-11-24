@@ -48,11 +48,14 @@ snippet if
 	}
 snippet el
 	else {
-		${1}
+		${1:/* code */}
+	}
+snippet eli
+	else if (${1:/* condition */}) {
+		${2:/* code */}
 	}
 snippet ife
 	if (${1:/* condition */}) {
-		${2:/* code */}
 	}
 	else {
 		${3:/* code */}
