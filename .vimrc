@@ -127,7 +127,7 @@ nnoremap <silent> <F3> :NERDTreeToggle<CR>
 let Grep_Path = '/bin/grep'
 let Fgrep_Path = '/bin/fgrep' 
 let Egrep_Path = '/bin/egrep' 
-let Agrep_Path = '/usr/bin/agrep' 
+let Agrep_Path = '/bin/agrep' 
 let Grep_Find_Path = '/usr/bin/find'
 let Grep_Xargs_Path = '/usr/bin/xargs'
 let Grep_Default_Options = '-i'

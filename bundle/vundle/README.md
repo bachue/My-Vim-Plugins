@@ -33,10 +33,10 @@
      Bundle 'tpope/vim-fugitive'
      Bundle 'Lokaltog/vim-easymotion'
      Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
+     Bundle 'tpope/vim-rails.git'
      " vim-scripts repos
      Bundle 'L9'
      Bundle 'FuzzyFinder'
-     Bundle 'rails.vim'
      " non github repos
      Bundle 'git://git.wincent.com/command-t.git'
      " ...
@@ -62,9 +62,7 @@
 
      Installing requires [Git] and triggers [Git clone](http://gitref.org/creating/#clone) for each configured repo to `~/.vim/bundle/`.
      
-4. Consider donating
-
-[![](https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=T44EJZX8RBUWY)
+4. Consider [donating](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=T44EJZX8RBUWY)
 
 *Thank you* for supporting this project! )
 
