@@ -1,3 +1,4 @@
+Bundle 'https://github.com/corntrace/bufexplorer.git'
 Bundle 'https://github.com/othree/html5.vim.git'
 Bundle 'https://github.com/vim-scripts/OmniCppComplete.git'
 Bundle 'https://github.com/vim-scripts/tComment.git'
