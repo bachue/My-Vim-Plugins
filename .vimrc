@@ -78,9 +78,9 @@ autocmd BufEnter * silent! lcd %:p:h
 nnoremap <silent> <F2> ggVG=
 nnoremap <silent> <F5> :TlistToggle <CR>
 
-"set dictionary=/usr/share/dict/words
+set dictionary=/usr/share/dict/cracklib-small
 
-set completeopt+=longest,menu,preview
+set completeopt=longest,menu,preview
 syntax enable
 syntax on
 
@@ -141,7 +141,7 @@ let g:SuperTabDefaultCompletionType = "context"
 let g:SuperTabContextDefaultCompletionType = "<c-x><c-o>"
 let g:SuperTabContextTextOmniPrecedence = ['&omnifunc', '&completefunc']
 let g:SuperTabCompletionContexts = ['s:ContextText', 's:ContextDiscover']
-let g:SuperTabContextDiscoverDiscovery = ["&omnifunc:<c-x><c-o>", "&completefunc:<c-x><c-u>"]
+let g:SuperTabContextDiscoverDiscovery = ["&completefunc:<c-x><c-u>", "&omnifunc:<c-x><c-o>"]
 
 let g:ragtag_global_maps = 1 
 let g:acp_behaviorSnipmateLength = 1
