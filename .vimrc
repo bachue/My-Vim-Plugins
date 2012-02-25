@@ -20,6 +20,7 @@ set cinoptions={0,1s,t0,n-2,p2s,(03s,=.5s,>1s,=1s,:1s)}
 set wildmenu
 set wildmode=list:longest,full
 set switchbuf=usetab,newtab
+set encoding=utf-8
 
 set tags=./tags
 set tags+=~/.vim/cpptags
@@ -147,7 +148,7 @@ let g:ragtag_global_maps = 1
 let g:acp_behaviorSnipmateLength = 1
 
 set laststatus=2
-set statusline=%F%m%r%h%w\ [%{&ff}]\ [%Y]\ [%{(&fenc==\"\")?&enc:&fenc}%{(&bomb?\",BOM\":\"\")}]\ [ASCII=\%03.3b]\ [HEX=\%02.2B]\ [POS=%04l,%04v][%p%%]\ [LEN=%L]\ %=[%{fugitive#statusline()}]
+let g:Powerline_symbols = 'unicode'
 
 let Tlist_Use_Right_Window = 1
 let Tlist_Use_SingleClick = 1
