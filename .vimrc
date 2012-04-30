@@ -199,3 +199,10 @@ autocmd BufReadPost *
 			\ if line("'\"") > 0 && line("'\"") <= line('$') |
 			\   execute 'normal g`"' |
 			\ endif |"'"
+
+if !exists(":DiffOrig")
+  command DiffOrig vert new | set bt=nofile | r ++edit # | 0d_ | diffthis
+			  \ | wincmd p | diffthis
+endif
+
+set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*.so,*~
