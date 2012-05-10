@@ -21,6 +21,7 @@ set wildmenu
 set wildmode=list:longest,full
 set switchbuf=usetab,newtab
 set encoding=utf-8
+set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*.so,*~
 
 set tags=./tags
 set tags+=~/.vim/cpptags
@@ -33,12 +34,6 @@ cmap <C-Tab> <Esc>gt
 map <C-S-Tab> gT
 imap <C-S-Tab> <Esc>gT
 cmap <C-S-Tab> <Esc>gT
-
-for i in [1, 2, 3, 4, 5, 6, 7, 8, 9]
-	execute 'map <M-' . i . '> ' . i . 'gt'
-	execute 'imap <M-' . i . '> <Esc>' . i . 'gt'
-	execute 'cmap <M-' . i . '> <Esc>' . i . 'gt'
-endfor
 
 set undodir=~/.tmp/undodir
 set undofile
@@ -205,4 +200,7 @@ if !exists(":DiffOrig")
 			  \ | wincmd p | diffthis
 endif
 
-set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*.so,*~
+autocmd FileType * 
+        \ let b:AutoClosePairs = AutoClose#DefaultPairsModified("", "<")
+autocmd FileType xml,html,eruby
+        \ let b:AutoClosePairs = AutoClose#DefaultPairsModified("<>", "")
