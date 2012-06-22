@@ -35,13 +35,13 @@ map <C-S-Tab> gT
 imap <C-S-Tab> <Esc>gT
 cmap <C-S-Tab> <Esc>gT
 
-set undodir=~/.tmp/undodir
+set undodir=~/.vim/.undodir
 set undofile
 
-set directory=~/.tmp/swapdir
+set directory=~/.vim/.swapdir
 
 set backup
-set backupdir=~/.tmp/backupdir
+set backupdir=~/.vim/.backupdir
 
 noremap <C-J> <C-W>j
 noremap <C-K> <C-W>k

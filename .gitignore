@@ -1,2 +1,5 @@
 bundle/*
 !bundle/vundle
+.undodir/*
+.backupdir/*
+.swapdir/*
