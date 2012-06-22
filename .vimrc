@@ -140,7 +140,6 @@ let g:SuperTabCompletionContexts = ['s:ContextText', 's:ContextDiscover']
 let g:SuperTabContextDiscoverDiscovery = ["&completefunc:<c-x><c-u>", "&omnifunc:<c-x><c-o>"]
 
 let g:ragtag_global_maps = 1 
-let g:acp_behaviorSnipmateLength = 1
 
 set laststatus=2
 let g:Powerline_symbols = 'unicode'
