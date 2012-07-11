@@ -15,8 +15,8 @@ set incsearch
 set linebreak
 set showbreak=>>
 set smartindent
-set cindent
-set cinoptions={0,1s,t0,n-2,p2s,(03s,=.5s,>1s,=1s,:1s)}
+"set cindent
+"set cinoptions={0,1s,t0,n-2,p2s,(03s,=.5s,>1s,=1s,:1s)}
 set wildmenu
 set wildmode=list:longest,full
 set switchbuf=usetab,newtab
@@ -56,7 +56,7 @@ noremap <C-Right> <C-W>l
 nnoremap <F7> /<C-R><C-W><CR>
 nnoremap <F8> :%s/<C-R><C-W>/
 
-noremap <C-W> :clo<CR>
+noremap <C-W><C-W> :clo<CR>
 
 " ALT-[1-9] is switch to specified tab
 for i in [1, 2, 3, 4, 5, 6, 7, 8, 9]
@@ -99,7 +99,7 @@ autocmd FileType css setl omnifunc=csscomplete#CompleteCSS noci
 autocmd FileType xml setl omnifunc=xmlcomplete#CompleteTags
 autocmd FileType php setl omnifunc=phpcomplete#CompletePHP
 autocmd FileType ruby,eruby set omnifunc=rubycomplete#Complete
-autocmd FileType ruby,eruby setlocal iskeyword+=:,?,!
+autocmd FileType ruby,eruby,lisp setlocal iskeyword+=:,?,!
 autocmd FileType ruby,eruby let g:rubycomplete_buffer_loading = 1
 autocmd FileType ruby,eruby let g:rubycomplete_rails = 1
 autocmd FileType ruby,eruby let g:rubycomplete_classes_in_global = 1
@@ -203,6 +203,9 @@ autocmd FileType *
         \ let b:AutoClosePairs = AutoClose#DefaultPairsModified("", "<")
 autocmd FileType xml,html,eruby
         \ let b:AutoClosePairs = AutoClose#DefaultPairsModified("<>", "")
+autocmd FileType lisp
+        \ let b:AutoClosePairs = AutoClose#DefaultPairsModified("", "'")
+autocmd FileType c,cpp set cindent
 
 let g:user_zen_expandabbr_key = '<c-e>'
 let g:use_zen_complete_tag = 1
