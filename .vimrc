@@ -206,6 +206,7 @@ autocmd FileType xml,html,eruby
 autocmd FileType lisp
         \ let b:AutoClosePairs = AutoClose#DefaultPairsModified("", "'")
 autocmd FileType c,cpp set cindent
-
-let g:user_zen_expandabbr_key = '<c-e>'
-let g:use_zen_complete_tag = 1
+autocmd FileType xml,html,eruby,css,javascript
+		\ let g:user_zen_expandabbr_key = '<c-q>'
+autocmd FileType xml,html,eruby,css,javascript
+		\ let g:use_zen_complete_tag = 1
