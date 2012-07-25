@@ -71,7 +71,7 @@ filetype indent on
 
 autocmd BufEnter * silent! lcd %:p:h
 
-nnoremap <silent> <F2> ggVG=
+nnoremap <silent> <F2> ggVG
 nnoremap <silent> <F5> :TlistToggle <CR>
 
 set dictionary=/usr/share/dict/cracklib-small
