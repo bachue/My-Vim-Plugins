@@ -3,3 +3,6 @@ bundle/*
 .undodir/*
 .backupdir/*
 .swapdir/*
+!.undodir/empty
+!.backupdir/empty
+!.swapdir/empty

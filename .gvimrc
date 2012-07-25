@@ -1,7 +1,14 @@
 colorscheme koehler
 
-set guifont=DejaVu\ Sans\ Mono\ 11
-set guifontwide=WenQuanYi\ Micro\ Hei\ 13
+if has("unix") && !has("gui_macvim")
+    set guifont=DejaVu\ Sans\ Mono\ 11
+    set guifontwide=WenQuanYi\ Micro\ Hei\ 13
+endif
+
+if has("mac") || has("gui_macvim")
+    set guifont=Bitstream\ Vera\ Sans\ Mono:h14
+endif
+
 set guioptions-=T
 set guioptions-=L
 set guioptions-=r
