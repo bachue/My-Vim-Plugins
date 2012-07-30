@@ -63,6 +63,9 @@ for i in [1, 2, 3, 4, 5, 6, 7, 8, 9]
 	execute 'map <M-' . i . '> ' . i . 'gt'
 	execute 'imap <M-' . i . '> <Esc>' . i . 'gt'
 	execute 'cmap <M-' . i . '> <Esc>' . i . 'gt'
+	execute 'map <D-' . i . '> ' . i . 'gt'
+	execute 'imap <D-' . i . '> <Esc>' . i . 'gt'
+	execute 'cmap <D-' . i . '> <Esc>' . i . 'gt'
 endfor
 
 filetype on
@@ -73,6 +76,7 @@ autocmd BufEnter * silent! lcd %:p:h
 
 nnoremap <silent> <F2> ggVG
 nnoremap <silent> <F5> :TlistToggle <CR>
+nnoremap <silent> <F6> :tab sball <CR>
 
 set dictionary=/usr/share/dict/cracklib-small
 
