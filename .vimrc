@@ -124,13 +124,17 @@ colorscheme wargrey
 
 nnoremap <silent> <F3> :NERDTreeToggle<CR>
 
-let Grep_Path = '/bin/grep'
-let Fgrep_Path = '/bin/fgrep' 
-let Egrep_Path = '/bin/egrep' 
-let Agrep_Path = '/bin/agrep' 
-let Grep_Find_Path = '/usr/bin/find'
-let Grep_Xargs_Path = '/usr/bin/xargs'
+let Grep_Path = 'grep'
+let Fgrep_Path = 'fgrep' 
+let Egrep_Path = 'egrep' 
+let Agrep_Path = 'agrep' 
+let Grep_Find_Path = 'find'
+let Grep_Xargs_Path = 'xargs'
 let Grep_Default_Options = '-i'
+
+if has("mac")
+	let Grep_Xargs_Path = 'gxargs'
+endif
 
 nnoremap <silent> <F4> :Rgrep<CR>
 
