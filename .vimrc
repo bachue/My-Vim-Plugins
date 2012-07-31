@@ -104,6 +104,7 @@ autocmd FileType xml setl omnifunc=xmlcomplete#CompleteTags
 autocmd FileType php setl omnifunc=phpcomplete#CompletePHP
 autocmd FileType ruby,eruby set omnifunc=rubycomplete#Complete
 autocmd FileType ruby,eruby,lisp setlocal iskeyword+=:,?,!
+autocmd FileType ruby,eruby setlocal iskeyword+=$
 autocmd FileType ruby,eruby let g:rubycomplete_buffer_loading = 1
 autocmd FileType ruby,eruby let g:rubycomplete_rails = 1
 autocmd FileType ruby,eruby let g:rubycomplete_classes_in_global = 1
@@ -218,3 +219,4 @@ autocmd FileType xml,html,eruby,css,javascript
 		\ let g:user_zen_expandabbr_key = '<c-q>'
 autocmd FileType xml,html,eruby,css,javascript
 		\ let g:use_zen_complete_tag = 1
+autocmd FileType ruby,eruby setlocal iskeyword+=@,$
