@@ -104,7 +104,6 @@ autocmd FileType xml setl omnifunc=xmlcomplete#CompleteTags
 autocmd FileType php setl omnifunc=phpcomplete#CompletePHP
 autocmd FileType ruby,eruby set omnifunc=rubycomplete#Complete
 autocmd FileType ruby,eruby,lisp setlocal iskeyword+=:,?,!
-autocmd FileType ruby,eruby setlocal iskeyword+=$
 autocmd FileType lisp setlocal iskeyword+=',=
 autocmd FileType ruby,eruby let g:rubycomplete_buffer_loading = 1
 autocmd FileType ruby,eruby let g:rubycomplete_rails = 1
