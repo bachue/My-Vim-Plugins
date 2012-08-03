@@ -178,22 +178,6 @@ let OmniCpp_MayCompleteArrow = 1 " autocomplete after ->
 let OmniCpp_MayCompleteScope = 1 " autocomplete after ::
 let OmniCpp_DefaultNamespaces = ["std", "_GLIBCXX_STD"]"
 
-" ,t ,b is activate Command-T
-function! s:ProjectRoot()
-	if exists('b:rails_root')
-		return b:rails_root
-	elseif exists('b:bundler_root')
-		return b:bundler_root
-	elseif exists('b:rake_root')
-		return b:rake_root
-	elseif exists('b:git_dir')
-		return fnamemodify(b:git_dir, ':p:h:h')
-	endif
-endfunction
-
-nmap ,t :execute 'CommandT ' . fnameescape(<SID>ProjectRoot())<CR>
-nmap ,b :CommandTBuffer<CR>
-
 " When editing a file, always jump to the last known cursor position.
 "     " Don't do it when the position is invalid or when inside an event
 "     handler
