@@ -23,6 +23,9 @@ set switchbuf=usetab,newtab
 set encoding=utf-8
 set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*.so,*~
 
+hi CursorLine cterm=underline ctermbg=darkgrey guibg=darkgrey
+set cursorline!
+
 set tags=./tags
 set tags+=~/.vim/cpptags
 set tags+=~/.vim/systags
@@ -158,6 +161,7 @@ let Tlist_Use_SingleClick = 1
 autocmd BufWritePost * :TlistUpdate
 
 autocmd BufEnter * :Alias q qall
+autocmd BufEnter * :Alias n tabnew
 autocmd BufEnter * :Alias wq wqall
 autocmd BufEnter * :Alias W w
 autocmd BufEnter * :Alias diff diffsplit
