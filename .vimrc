@@ -208,3 +208,4 @@ autocmd FileType xml,html,eruby,css,javascript
 autocmd FileType xml,html,eruby,css,javascript
 		\ let g:use_zen_complete_tag = 1
 autocmd FileType ruby,eruby setlocal iskeyword+=@,$
+autocmd FileType xml,html,css,eruby setlocal iskeyword+=-
