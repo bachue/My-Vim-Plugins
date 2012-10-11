@@ -27,6 +27,7 @@ hi CursorLine cterm=underline ctermbg=darkgrey guibg=darkgrey
 set cursorline!
 
 set tags=./tags
+set tags+=./TAGS
 set tags+=~/.vim/cpptags
 set tags+=~/.vim/systags
 
