@@ -30,3 +30,25 @@ nnoremap <silent> <F7> :promptfind <CR>
 nnoremap <silent> <F8> :promptrepl <CR>
 
 let Tlist_Show_Menu = 1
+
+set guitablabel=%{ShortGuiTabLabel()} 
+function! ShortGuiTabLabel() 
+	let label = '' 
+	let bufnrlist = tabpagebuflist(v:lnum) 
+
+	for bufnr in bufnrlist 
+		if getbufvar(bufnr, "&modified") 
+			let label = '+' 
+			break 
+		endif 
+	endfor 
+
+	let bufId = bufnrlist[tabpagewinnr(v:lnum) - 1] 
+	let fn = bufname(bufId) 
+	let lastSlash = strridx(fn, '\') 
+
+	if lastSlash < 0 
+		let lastSlash = strridx(fn, '/') 
+	endif 
+	return label . strpart(fn, lastSlash+1, strlen(fn)) 
+endfunction 
