@@ -15,6 +15,7 @@ set incsearch
 set linebreak
 set showbreak=>>
 set smartindent
+"no use for a ruby/rails developer
 "set cindent
 "set cinoptions={0,1s,t0,n-2,p2s,(03s,=.5s,>1s,=1s,:1s)}
 set wildmenu
@@ -31,14 +32,6 @@ set tags+=./TAGS
 set tags+=~/.vim/cpptags
 set tags+=~/.vim/systags
 
-map <C-Tab> gt
-imap <C-Tab> <Esc>gt
-cmap <C-Tab> <Esc>gt
-
-map <C-S-Tab> gT
-imap <C-S-Tab> <Esc>gT
-cmap <C-S-Tab> <Esc>gT
-
 set undodir=~/.vim/.undodir
 set undofile
 
@@ -47,20 +40,42 @@ set directory=~/.vim/.swapdir
 set backup
 set backupdir=~/.vim/.backupdir
 
-noremap <C-J> <C-W>j
-noremap <C-K> <C-W>k
-noremap <C-H> <C-W>h
-noremap <C-L> <C-W>l
+map <C-J> <C-W>j
+imap <C-J> <Esc><C-J>
+cmap <C-J> <Esc><C-J>
+map <C-K> <C-W>k
+imap <C-K> <Esc><C-K>
+cmap <C-K> <Esc><C-K>
+map <C-H> <C-W>h
+imap <C-H> <Esc><C-H>
+cmap <C-H> <Esc><C-H>
+map <C-L> <C-W>l
+imap <C-L> <Esc><C-L>
+cmap <C-L> <Esc><C-L>
 
-noremap <C-Down> <C-W>j
-noremap <C-Up> <C-W>k
-noremap <C-Left> <C-W>h
-noremap <C-Right> <C-W>l
+map <C-Down> <C-W>j
+imap <C-Down> <Esc><C-Down>
+cmap <C-Down> <Esc><C-Down>
+map <C-Up> <C-W>k
+imap <C-Up> <Esc><C-Up>
+cmap <C-Up> <Esc><C-Up>
+map <C-Left> <C-W>h
+imap <C-Left> <Esc><C-Left>
+cmap <C-Left> <Esc><C-Left>
+map <C-Right> <C-W>l
+imap <C-Right> <Esc><C-Right>
+cmap <C-Right> <Esc><C-Right>
 
-nnoremap <F7> /<C-R><C-W><CR>
-nnoremap <F8> :%s/<C-R><C-W>/
+map <F7> /<C-R><C-W><CR>
+imap <F7> <Esc><F7>
+cmap <F7> <Esc><F7>
+map <F8> :%s/<C-R><C-W>/
+imap <F8> <Esc><F8>
+cmap <F8> <Esc><F8>
 
-noremap <C-W><C-W> :clo<CR>
+map <C-W><C-W> :clo<CR>
+imap <C-W><C-W> <Esc><C-W><C-W>
+cmap <C-W><C-W> <Esc><C-W><C-W>
 
 " ALT-[1-9] is switch to specified tab
 for i in [1, 2, 3, 4, 5, 6, 7, 8, 9]
@@ -77,10 +92,6 @@ filetype plugin on
 filetype indent on
 
 autocmd BufEnter * silent! lcd %:p:h
-
-nnoremap <silent> <F2> ggVG
-nnoremap <silent> <F5> :TlistToggle <CR>
-nnoremap <silent> <F6> :tab sball <CR>
 
 set dictionary=/usr/share/dict/cracklib-small
 
@@ -127,8 +138,6 @@ autocmd User BufEnterRails call s:BufEnterRails()
 set t_Co=256
 colorscheme wargrey
 
-nnoremap <silent> <F3> :NERDTreeToggle<CR>
-
 let Grep_Path = 'grep'
 let Fgrep_Path = 'fgrep' 
 let Egrep_Path = 'egrep' 
@@ -141,10 +150,25 @@ if has("mac")
 	let Grep_Xargs_Path = 'gxargs'
 endif
 
-nnoremap <silent> <F4> :Rgrep<CR>
-
 map <F1> :BufExplorer<CR>
 imap <F1> <Esc><F1>
+cmap <F1> <Esc><F1>
+
+map <F2> ggVG
+imap <F2> <Esc><F2>
+cmap <F2> <Esc><F2>
+
+map <F3> :NERDTreeToggle<CR>
+imap <F3> <Esc><F3>
+cmap <F3> <Esc><F3>
+
+map <F4> :Rgrep<CR>
+imap <F4> <Esc><F4>
+cmap <F4> <Esc><F4>
+
+map <F5> :TlistToggle<CR>
+imap <F5> <Esc><F5>
+cmap <F5> <Esc><F5>
 
 let g:SuperTabDefaultCompletionType = "context"
 let g:SuperTabContextDefaultCompletionType = "<c-x><c-o>"
@@ -172,7 +196,8 @@ autocmd BufEnter *.feature :call CmdAlias('cu', '!cucumber %')
 
 au BufNewFile,BufRead,BufEnter *.c,*.h,*.cpp,*.hpp set omnifunc=omni#cpp#complete#Main
 
-map <F12> :!ctags -R --sort=yes --c++-kinds=+p --fields=+iaS --extra=+q .<CR>
+"now it's no use for a ruby/rails developer
+"map <F12> :!ctags -R --sort=yes --c++-kinds=+p --fields=+iaS --extra=+q .<CR>
 
 let OmniCpp_NamespaceSearch = 1
 let OmniCpp_GlobalScopeSearch = 1
@@ -197,8 +222,8 @@ if !exists(":DiffOrig")
 			  \ | wincmd p | diffthis
 endif
 
-autocmd FileType * 
-        \ let b:AutoClosePairs = AutoClose#DefaultPairsModified("", "<")
+autocmd FileType *
+		\ let b:AutoClosePairs = AutoClose#DefaultPairsModified("", "<")
 autocmd FileType xml,html,eruby
         \ let b:AutoClosePairs = AutoClose#DefaultPairsModified("<>", "")
 autocmd FileType lisp
