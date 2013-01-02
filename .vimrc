@@ -43,6 +43,8 @@ set backupdir=~/.vim/.backupdir
 
 map j gj
 map k gk
+map <Down> gj
+map <Up> gk
 
 map <C-J> <C-W>j
 imap <C-J> <Esc><C-J>
