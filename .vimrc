@@ -23,6 +23,7 @@ set wildmode=list:longest,full
 set switchbuf=usetab,newtab
 set encoding=utf-8
 set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*.so,*~
+set expandtab
 set shell=/bin/sh
 
 hi CursorLine cterm=underline ctermbg=darkgrey guibg=darkgrey
@@ -131,7 +132,7 @@ autocmd FileType ruby,eruby let g:rubycomplete_rails = 1
 autocmd FileType ruby,eruby let g:rubycomplete_classes_in_global = 1
 autocmd FileType ruby,eruby let g:rubycomplete_include_object = 1
 autocmd FileType ruby,eruby let g:rubycomplete_include_objectspace = 1
-autocmd FileType ruby,cucumber set ts=2 sw=2 sts=2 expandtab
+autocmd FileType ruby,cucumber,javascript set ts=2 sw=2 sts=2
 
 let g:bufExplorerShowTabBuffer=1
 
