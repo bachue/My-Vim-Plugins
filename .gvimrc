@@ -11,7 +11,7 @@ endif
 
 if has("gui_macvim")
 	set showtabline=2
-	set columns=140
+	set columns=80
 	set lines=40
 	map <D-F1> :set lines=1000 columns=1000 <CR>
 endif
