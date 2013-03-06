@@ -45,6 +45,7 @@ hi TabLineFill	  term=bold,reverse  cterm=bold ctermfg=lightblue ctermbg=white g
 hi TabLineSel	  term=reverse	ctermfg=white ctermbg=lightblue guifg=white guibg=blue
 hi Pmenu guibg=#000055 guifg=#22dddd
 hi PmenuSel guibg=#0000aa guifg=#55ffff
+hi SignColumn guibg=black guifg=black
 hi link IncSearch		Visual
 hi link String			Constant
 hi link Character		Constant
