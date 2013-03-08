@@ -25,6 +25,7 @@ set encoding=utf-8
 set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*.so,*~
 set expandtab
 set shell=/bin/sh
+set autoread
 
 hi CursorLine cterm=underline ctermbg=darkgrey guibg=darkgrey
 set cursorline!
