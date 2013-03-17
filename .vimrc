@@ -149,9 +149,9 @@ set t_Co=256
 colorscheme wargrey
 
 let Grep_Path = 'grep'
-let Fgrep_Path = 'fgrep' 
-let Egrep_Path = 'egrep' 
-let Agrep_Path = 'agrep' 
+let Fgrep_Path = 'fgrep'
+let Egrep_Path = 'egrep'
+let Agrep_Path = 'agrep'
 let Grep_Find_Path = 'find'
 let Grep_Xargs_Path = 'xargs'
 let Grep_Default_Options = '-i'
@@ -164,9 +164,9 @@ map <F1> :BufExplorer<CR>
 imap <F1> <Esc><F1>
 cmap <F1> <Esc><F1>
 
-map <F2> ggVG
-imap <F2> <Esc><F2>
-cmap <F2> <Esc><F2>
+" map <F2> ggVG
+" imap <F2> <Esc><F2>
+" cmap <F2> <Esc><F2>
 
 map <F3> :NERDTreeToggle<CR>
 imap <F3> <Esc><F3>
@@ -186,7 +186,7 @@ let g:SuperTabContextTextOmniPrecedence = ['&omnifunc', '&completefunc']
 let g:SuperTabCompletionContexts = ['s:ContextText', 's:ContextDiscover']
 let g:SuperTabContextDiscoverDiscovery = ["&completefunc:<c-x><c-u>", "&omnifunc:<c-x><c-o>"]
 
-let g:ragtag_global_maps = 1 
+let g:ragtag_global_maps = 1
 
 set laststatus=2
 let g:Powerline_symbols = 'unicode'
@@ -245,6 +245,23 @@ autocmd FileType xml,html,eruby,css,javascript
 		\ let g:use_zen_complete_tag = 1
 autocmd FileType ruby,eruby setlocal iskeyword+=@,$
 autocmd FileType xml,html,css,eruby setlocal iskeyword+=-
+autocmd BufWritePre * :%s/\s\+$//e
 
 let g:gitgutter_enabled = 1
 let g:gitgutter_highlights = 1
+
+let g:ctrlp_prompt_mappings = {
+  \ 'AcceptSelection("e")': [],
+  \ 'AcceptSelection("t")': ['<cr>', '<c-m>'],
+  \ }
+
+let g:ctrlp_custom_ignore = '\.git$\|\.hg$\|\.svn$\|.rvm$'
+let g:ctrlp_working_path_mode=0
+let g:ctrlp_match_window_bottom=1
+let g:ctrlp_max_height=15
+let g:ctrlp_match_window_reversed=0
+let g:ctrlp_mruf_max=500
+let g:ctrlp_follow_symlinks=1
+
+let g:ctrlp_map = '<F2>'
+let g:ctrlp_cmd = 'CtrlPMixed'
