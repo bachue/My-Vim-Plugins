@@ -245,7 +245,17 @@ autocmd FileType xml,html,eruby,css,javascript
 		\ let g:use_zen_complete_tag = 1
 autocmd FileType ruby,eruby setlocal iskeyword+=@,$
 autocmd FileType xml,html,css,eruby setlocal iskeyword+=-
-autocmd BufWritePre * :%s/\s\+$//e
+
+" Removes trailing spaces
+function TrimWhiteSpace()
+  %s/\s*$//
+  ''
+:endfunction
+
+autocmd FileWritePre * :call TrimWhiteSpace()
+autocmd FileAppendPre * :call TrimWhiteSpace()
+autocmd FilterWritePre * :call TrimWhiteSpace()
+autocmd BufWritePre * :call TrimWhiteSpace()
 
 let g:gitgutter_enabled = 1
 let g:gitgutter_highlights = 1
