@@ -133,7 +133,7 @@ autocmd FileType ruby,eruby let g:rubycomplete_rails = 1
 autocmd FileType ruby,eruby let g:rubycomplete_classes_in_global = 1
 autocmd FileType ruby,eruby let g:rubycomplete_include_object = 1
 autocmd FileType ruby,eruby let g:rubycomplete_include_objectspace = 1
-autocmd FileType ruby,cucumber,javascript set ts=2 sw=2 sts=2
+autocmd FileType ruby,eruby,cucumber,javascript set ts=2 sw=2 sts=2
 
 let g:bufExplorerShowTabBuffer=1
 
@@ -246,17 +246,6 @@ autocmd FileType xml,html,eruby,css,javascript
 autocmd FileType ruby,eruby setlocal iskeyword+=@,$
 autocmd FileType xml,html,css,eruby setlocal iskeyword+=-
 
-" Removes trailing spaces
-function TrimWhiteSpace()
-  %s/\s*$//
-  ''
-:endfunction
-
-autocmd FileWritePre * :call TrimWhiteSpace()
-autocmd FileAppendPre * :call TrimWhiteSpace()
-autocmd FilterWritePre * :call TrimWhiteSpace()
-autocmd BufWritePre * :call TrimWhiteSpace()
-
 let g:gitgutter_enabled = 1
 let g:gitgutter_highlights = 1
 
@@ -266,12 +255,12 @@ let g:ctrlp_prompt_mappings = {
   \ }
 
 let g:ctrlp_custom_ignore = '\.git$\|\.hg$\|\.svn$\|.rvm$'
-let g:ctrlp_working_path_mode=0
+" let g:ctrlp_working_path_mode=0
+let g:ctrlp_working_path_mode=2
 let g:ctrlp_match_window_bottom=1
 let g:ctrlp_max_height=15
 let g:ctrlp_match_window_reversed=0
 let g:ctrlp_mruf_max=500
-let g:ctrlp_follow_symlinks=1
 
 let g:ctrlp_map = '<F2>'
 let g:ctrlp_cmd = 'CtrlPMixed'
