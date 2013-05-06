@@ -156,7 +156,8 @@ let Grep_Find_Path = 'find'
 let Grep_Xargs_Path = 'xargs'
 let Grep_Default_Options = '-i'
 
-if has("mac")
+let os=substitute(system('uname'), '\n', '', '')
+if os == 'Darwin' || os == 'Mac'
 	let Grep_Xargs_Path = 'gxargs'
 endif
 
