@@ -6,7 +6,7 @@ if has("unix") && !has("gui_macvim")
 endif
 
 if has("mac") || has("gui_macvim")
-    set guifont=Bitstream\ Vera\ Sans\ Mono:h14
+    set guifont=Monaco:h14
 endif
 
 if has("gui_macvim")
