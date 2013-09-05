@@ -265,3 +265,7 @@ let g:ctrlp_mruf_max=500
 
 let g:ctrlp_map = '<F2>'
 let g:ctrlp_cmd = 'CtrlPMixed'
+
+if os == 'Darwin' || os == 'Mac'
+    let Tlist_Ctags_Cmd = '/usr/local/bin/ctags'
+endif
